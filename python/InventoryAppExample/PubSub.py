@@ -1,10 +1,3 @@
-"""
-PubSub.py
-
-This file defines the class `PubSub`, which contains common functionality for
-both publisher and subscriber clients.
-"""
-
 import io
 import threading
 import xml.etree.ElementTree as et
@@ -20,6 +13,7 @@ import pubsub_api_pb2 as pb2
 import pubsub_api_pb2_grpc as pb2_grpc
 from urllib.parse import urlparse
 from utils.ClientUtil import load_properties
+from util.ChangeEventHeaderUtility import process_bitmap
 
 properties = load_properties("../resources/application.properties")
 
